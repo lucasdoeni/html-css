@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem Dinamica</h1>
+    <p>Tente abrir ese site em varios dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="imagem Flexível">
+    </picture>
+
+    <h1>Reproduzindo Audio</h1>
+    <p>Vamos aprender a reproduzir audios em HTML5</p>
+    <audio src="midia/Funky-Carioca.mp3" controls autoplay loop></audio>
+    <!-- MP3 - WAV - OGG  Formatos compativeis-->
+
+    <!-- controls - abre o painel de controle da midia -->
+    <!-- autoplay - inicia automaticamente a midia ao acessar o site -->
+    <!-- loop - reinicia a musica assim que ela termina -->
+
+    <!-- CODIGO ALTERNATIVO: 
+            
+            <audio preload='metadata' autoplay controls loop>
+                <source src='midia/Funky-Carioca.mp3' type='audio/mpeg'>
+                <source src='midia/Funky-Carioca.ogg' type='audio/ogg'>
+                <source src='midia/Funky-Carioca.wav' type='audio/wav'>
+
+                <p> Infelizmente seu navegador nao consegue reproduzir audio. <a href='midia/Funky-Carioca.mp3'> Clique aqui para baixar o arquivo MP3 </a></p>
+             -->
+    
+</body>
+</html>
+
+<!-- <p><u><abbr title="imagens menor acima, seguida da media e da grande">Segue essa orgem para funcionar</abbr></u></p> -->

@@ -1,0 +1,27 @@
+ * {
+    font-family: Arial, Helvetica, sans-serif;
+    /* height: 100%; */
+ }
+ body {
+    background-image: linear-gradient(to right, #9FC131, #DBF227);
+    background-attachment: fixed;
+ }
+ p {
+    text-align: justify; /*Alinhamento do texto*/
+ }
+ main {   /* PARTE BRANCA */
+    background-color: white;
+    border-radius: 20px;  /* PONTAS ARREDONDADAS */
+    box-shadow: 5px 5px 15px #04294081; /* resp. Lado / Baixo / Espalhar / Cor */
+    width: 600px; /* LARGURA */
+    padding: 10px; /* PREENCHIMENTO */
+    margin: auto; /* Posição do texto no corpo do site */
+ }
+ h1 {
+    text-align: center; /* Centralizar texto */
+    color: #9FC131;
+    text-shadow: 1px 1px 2px #042940; /* SOMBRA NO TEXTO */
+ }
+ h2 {
+    color: #005C53;
+ }

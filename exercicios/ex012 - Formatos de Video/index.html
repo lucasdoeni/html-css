@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos em HTML5</title>
+</head>
+<body>
+    <h1>Inserindo videos Hospedados Localmente</h1>
+    <p>Este video esta hospedado no meu proprio servidor</p>
+    
+    <!-- <video src="midia/meu-video.webm.webm" width="500" controls></video> -->
+
+    <video controls width="500" poster="imagens/limoes-capa.png" loop>
+        <source src="midia/meu-video.webm.webm" type="video/mp4">
+        <source src="midia/meu-video.mkv.mkv" type="video/mkv">
+        <source src="midia/meu-video.webm.webm" type="video/webm">
+
+        <p>Seu navegador nao tem compatibilidade com reproduçao de videos</p>
+    </video>
+
+
+    <h1>INSERINDO VIDEOS DO YOUTUBE</h1>
+    <iframe width="500" height="315" src="https://www.youtube.com/embed/i7L19SOqbNM?si=qKLSE5ezD3oOOOB_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+</body>
+</html>
+
+<!-- poster - serve para definir uma capa do video
+     width - tamanho
+     controls - ferramenta de reproduçao de midias  
+     loop - para reiniciar a midia assim que acabar
+     autoplay - para a midia iniciar automaticamente  -->
+
+     <!-- SEMPRE GERAR VARIOS VIDEOS IGUAIS DE TAMANHOS DIFERENTES. PRIORIZE OS VIDEOS MAIS LEVES EM PRIMEIRO E A SEQUENCIA COM OS MAIS PESADOS EM 'SOURCE' -->
+
+<!-- Para adicionar videos do youtube, selecione o video, clique em compartilhar e selecione "Incorporar", copie o codigo e cole no html do site 
+-->
