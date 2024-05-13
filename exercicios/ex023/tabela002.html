@@ -12,6 +12,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -19,9 +20,34 @@
             padding: 10px;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         thead, tfoot {
             background-color: gray;
             color: white;
+        }
+
+        thead tr th {
+            /* Para o titulo da tabela descer junto a barra de rolagem - *Em table, deixar a posição = relative* */
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
+        tbody tr:nth-child(2n) {
+            /* EFEITO ZEBRADO */
+            background-color: lightgray;
+
+            /*
+            Outro Tipo de Comando -
+                tbody tr:nth-child(odd) *Apenas as linhas impares*
+                tbody tr:nth-child(even) *Apenas as linhas pares
+            */
         }
 
         td.num {
@@ -34,6 +60,7 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION (legenda)
             THEAD (Cabeça)
                 TR, TD, TH
             TBODY (Corpo)
@@ -42,10 +69,12 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>Populaçao das Unidades Federativas</caption>
+
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -160,10 +189,29 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>203 062 512</strong></td>
             </tr>
         </tfoot>
     </table>
+
+    <!--
+        scoope='cool' - diz respeito ao que é aquela coluna dentro da tabela
+
+        scoope='row' - diz respeuti ai que é aquela linha dentro da tabela
+
+        ** Ambos servem para auxiliar nos mecanismos de busca do Google **
+    -->
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In deserunt accusantium laborum, odio perferendis accusamus aspernatur hic, officiis nisi, distinctio dicta repellat praesentium ullam ad ut labore expedita! Sint, iste.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eveniet aliquam ipsum. Nam qui similique delectus officiis ducimus asperiores! Impedit ratione aspernatur magni, optio eaque architecto adipisci totam eveniet amet! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, alias. Laborum omnis ea iste porro tenetur autem eum reiciendis illo nesciunt aspernatur praesentium earum culpa atque itaque, magni, saepe voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem veritatis tempora in voluptas exercitationem hic ut nemo, saepe reiciendis commodi illo eaque accusamus at laudantium, architecto suscipit cum dolores alias.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In deserunt accusantium laborum, odio perferendis accusamus aspernatur hic, officiis nisi, distinctio dicta repellat praesentium ullam ad ut labore expedita! Sint, iste.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eveniet aliquam ipsum. Nam qui similique delectus officiis ducimus asperiores! Impedit ratione aspernatur magni, optio eaque architecto adipisci totam eveniet amet! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, alias. Laborum omnis ea iste porro tenetur autem eum reiciendis illo nesciunt aspernatur praesentium earum culpa atque itaque, magni, saepe voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem veritatis tempora in voluptas exercitationem hic ut nemo, saepe reiciendis commodi illo eaque accusamus at laudantium, architecto suscipit cum dolores alias.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In deserunt accusantium laborum, odio perferendis accusamus aspernatur hic, officiis nisi, distinctio dicta repellat praesentium ullam ad ut labore expedita! Sint, iste.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eveniet aliquam ipsum. Nam qui similique delectus officiis ducimus asperiores! Impedit ratione aspernatur magni, optio eaque architecto adipisci totam eveniet amet! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, alias. Laborum omnis ea iste porro tenetur autem eum reiciendis illo nesciunt aspernatur praesentium earum culpa atque itaque, magni, saepe voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem veritatis tempora in voluptas exercitationem hic ut nemo, saepe reiciendis commodi illo eaque accusamus at laudantium, architecto suscipit cum dolores alias.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In deserunt accusantium laborum, odio perferendis accusamus aspernatur hic, officiis nisi, distinctio dicta repellat praesentium ullam ad ut labore expedita! Sint, iste.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eveniet aliquam ipsum. Nam qui similique delectus officiis ducimus asperiores! Impedit ratione aspernatur magni, optio eaque architecto adipisci totam eveniet amet! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, alias. Laborum omnis ea iste porro tenetur autem eum reiciendis illo nesciunt aspernatur praesentium earum culpa atque itaque, magni, saepe voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem veritatis tempora in voluptas exercitationem hic ut nemo, saepe reiciendis commodi illo eaque accusamus at laudantium, architecto suscipit cum dolores alias.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In deserunt accusantium laborum, odio perferendis accusamus aspernatur hic, officiis nisi, distinctio dicta repellat praesentium ullam ad ut labore expedita! Sint, iste.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eveniet aliquam ipsum. Nam qui similique delectus officiis ducimus asperiores! Impedit ratione aspernatur magni, optio eaque architecto adipisci totam eveniet amet! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, alias. Laborum omnis ea iste porro tenetur autem eum reiciendis illo nesciunt aspernatur praesentium earum culpa atque itaque, magni, saepe voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem veritatis tempora in voluptas exercitationem hic ut nemo, saepe reiciendis commodi illo eaque accusamus at laudantium, architecto suscipit cum dolores alias.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In deserunt accusantium laborum, odio perferendis accusamus aspernatur hic, officiis nisi, distinctio dicta repellat praesentium ullam ad ut labore expedita! Sint, iste.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eveniet aliquam ipsum. Nam qui similique delectus officiis ducimus asperiores! Impedit ratione aspernatur magni, optio eaque architecto adipisci totam eveniet amet! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, alias. Laborum omnis ea iste porro tenetur autem eum reiciendis illo nesciunt aspernatur praesentium earum culpa atque itaque, magni, saepe voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem veritatis tempora in voluptas exercitationem hic ut nemo, saepe reiciendis commodi illo eaque accusamus at laudantium, architecto suscipit cum dolores alias.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In deserunt accusantium laborum, odio perferendis accusamus aspernatur hic, officiis nisi, distinctio dicta repellat praesentium ullam ad ut labore expedita! Sint, iste.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eveniet aliquam ipsum. Nam qui similique delectus officiis ducimus asperiores! Impedit ratione aspernatur magni, optio eaque architecto adipisci totam eveniet amet! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, alias. Laborum omnis ea iste porro tenetur autem eum reiciendis illo nesciunt aspernatur praesentium earum culpa atque itaque, magni, saepe voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem veritatis tempora in voluptas exercitationem hic ut nemo, saepe reiciendis commodi illo eaque accusamus at laudantium, architecto suscipit cum dolores alias.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In deserunt accusantium laborum, odio perferendis accusamus aspernatur hic, officiis nisi, distinctio dicta repellat praesentium ullam ad ut labore expedita! Sint, iste.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eveniet aliquam ipsum. Nam qui similique delectus officiis ducimus asperiores! Impedit ratione aspernatur magni, optio eaque architecto adipisci totam eveniet amet! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, alias. Laborum omnis ea iste porro tenetur autem eum reiciendis illo nesciunt aspernatur praesentium earum culpa atque itaque, magni, saepe voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem veritatis tempora in voluptas exercitationem hic ut nemo, saepe reiciendis commodi illo eaque accusamus at laudantium, architecto suscipit cum dolores alias.</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In deserunt accusantium laborum, odio perferendis accusamus aspernatur hic, officiis nisi, distinctio dicta repellat praesentium ullam ad ut labore expedita! Sint, iste.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eveniet aliquam ipsum. Nam qui similique delectus officiis ducimus asperiores! Impedit ratione aspernatur magni, optio eaque architecto adipisci totam eveniet amet! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, alias. Laborum omnis ea iste porro tenetur autem eum reiciendis illo nesciunt aspernatur praesentium earum culpa atque itaque, magni, saepe voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem veritatis tempora in voluptas exercitationem hic ut nemo, saepe reiciendis commodi illo eaque accusamus at laudantium, architecto suscipit cum dolores alias.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In deserunt accusantium laborum, odio perferendis accusamus aspernatur hic, officiis nisi, distinctio dicta repellat praesentium ullam ad ut labore expedita! Sint, iste.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eveniet aliquam ipsum. Nam qui similique delectus officiis ducimus asperiores! Impedit ratione aspernatur magni, optio eaque architecto adipisci totam eveniet amet! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, alias. Laborum omnis ea iste porro tenetur autem eum reiciendis illo nesciunt aspernatur praesentium earum culpa atque itaque, magni, saepe voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem veritatis tempora in voluptas exercitationem hic ut nemo, saepe reiciendis commodi illo eaque accusamus at laudantium, architecto suscipit cum dolores alias.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In deserunt accusantium laborum, odio perferendis accusamus aspernatur hic, officiis nisi, distinctio dicta repellat praesentium ullam ad ut labore expedita! Sint, iste.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eveniet aliquam ipsum. Nam qui similique delectus officiis ducimus asperiores! Impedit ratione aspernatur magni, optio eaque architecto adipisci totam eveniet amet! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, alias. Laborum omnis ea iste porro tenetur autem eum reiciendis illo nesciunt aspernatur praesentium earum culpa atque itaque, magni, saepe voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem veritatis tempora in voluptas exercitationem hic ut nemo, saepe reiciendis commodi illo eaque accusamus at laudantium, architecto suscipit cum dolores alias.</p>
 </body>
 </html>
